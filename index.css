@@ -1,0 +1,28 @@
+
+body {
+    background-color: khaki;
+    padding: 5vw;
+    text-align: center;
+    font-family: 'Source Code Pro', monospace;
+}
+.quiz {
+    background-color: beige;
+    margin-left: 10%;
+    margin-right: 10%;
+    min-width: 40%;
+    width: auto;
+    min-height: 10vh;
+}
+.quiz #question {
+    padding: 5%;
+}
+.quiz hr {
+    border-color: lightsteelblue;
+    border-radius: 4px;
+    max-width: 95%;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.quiz #answerDiv {
+    padding: 5%;
+}
