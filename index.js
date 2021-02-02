@@ -3,14 +3,7 @@ let type
 let question
 let answer
 let score = 0
-let input = document.getElementById('answer')
 
-input.addEventListener("keyup", function (e) {
-    if (e.keyCode === 13) {
-        e.preventDefault()
-        document.getElementById('submit').click()
-    }
-})
 
 function genQuestion() {
     return Math.floor(2*Math.random())
@@ -93,5 +86,10 @@ window.onload = function () {
     newQuestion()
 }
 
-
-
+let input = document.getElementById('answer');
+input.addEventListener('keypress', function(event) {
+    if (event.keyCode == 13) {
+        event.preventDefault()
+        document.getElementById('submit').click()
+    }
+})
