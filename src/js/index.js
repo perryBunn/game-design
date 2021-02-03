@@ -4,7 +4,6 @@ let question
 let answer
 let score = 0
 
-
 function genQuestion() {
     return Math.floor(2*Math.random())
 
@@ -44,9 +43,7 @@ function print(question, type) {
 }
 
 function isYes(a, S) {
-    console.log(a, S)
     let res =  a == S
-    console.log(res)
     if (res) {
         score += diff * 100
         alert("Correct!")
@@ -55,7 +52,6 @@ function isYes(a, S) {
 
 function newQuestion() {
     type = genQuestion()
-    console.log("type: ", type)
     if (type === 1) {
         question = equation(diff)
         answer = question[3]
@@ -63,25 +59,31 @@ function newQuestion() {
         question = multiplication(diff)
         answer = question[2]
     }
-    console.log(question)
     print(question, type)
 }
 
+function clearForm() {
+    let form = document.getElementById("form")
+    form.reset()
+}
+
+function difficulty() {
+    let res = prompt("Enter a difficulty from 1-4: ")
+    if (res <= 0) {
+        res = 1
+    }
+    return res
+}
+
 document.getElementById("submit").addEventListener('click', e => {
-    console.log("Submission detected...")
     let answerSubmit = document.querySelector("#submit");
     let userRes = document.getElementById("answer").value
-    console.log(userRes)
     answerSubmit.onclick = isYes(userRes, answer);
+    clearForm()
     newQuestion()
 })
 
-function difficulty() {
-    return prompt("Enter a difficulty from 1-4: ")
-}
-
 window.onload = function () {
-    // enter difficulty from 1-4
     diff = difficulty()
     newQuestion()
 }

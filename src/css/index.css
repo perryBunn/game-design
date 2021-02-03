@@ -1,6 +1,6 @@
-
 body {
-    background-color: khaki;
+    --main-bg-color: khaki;
+    background-color: var(--main-bg-color);
     padding: 5vw;
     text-align: center;
     font-family: 'Source Code Pro', monospace;
@@ -25,4 +25,19 @@ body {
 }
 .quiz #answerDiv {
     padding: 5%;
+}
+
+@media screen and (min-width: 900px){
+    body {
+        font-size: 300%;
+    }
+    .quiz {
+        min-width: 50%;
+    }
+    .quiz #question {
+
+    }
+    .quiz #answerDiv {
+
+    }
 }
