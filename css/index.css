@@ -26,6 +26,26 @@ body {
 .quiz #answerDiv {
     padding: 5%;
 }
+table {
+    width: 90vw;
+    padding-left: 10vw;
+    padding-right: 10vw;
+}
+th {
+    text-align: center;
+    width: 100%;
+}
+table#highScoreList, tr, td {
+    border-bottom: 1px solid white;
+}
+div#footer {
+    position: absolute;
+    left: 25%;
+    right: 25%;
+    width: 50%;
+    bottom: 1vh;
+    float: bottom;
+}
 
 @media screen and (min-width: 900px){
     body {

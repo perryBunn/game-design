@@ -17,6 +17,7 @@
         <hr>
         <div id="answerDiv">
             <form id="form">
+                <label for="answer">? = </label>
                 <input type="number" onfocus="this.value=''" id="answer" placeholder="Answer">
                 <input type="button" id="submit" value="Submit">
             </form>
@@ -24,6 +25,21 @@
     </div>
     <div class="score">
         <h3>Score: <span id="score">0</span></h3>
+    </div>
+    <div class="highScore">
+        <table id="highScoreList">
+            <div>
+                <th>High Scores</th>
+                <tr>
+                    <th>Questions</th>
+                    <th>Score</th>
+                </tr>
+            </div>
+            <tr>
+                <td><span>5</span></td>
+                <td><span>500</span></td>
+            </tr>
+        </table>
     </div>
     <div id="footer">
         <h6>Authors:
@@ -33,6 +49,6 @@
         </h6>
     </div>
     <script src="js/style.js"></script>
-    <script src="js/index.js"></script>
+    <script src="js"></script>
 </body>
 </html>
